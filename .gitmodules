@@ -1,0 +1,3 @@
+[submodule "submodules/python_core_libs"]
+	path = submodules/python_core_libs
+	url = ../python_core_libs.git
