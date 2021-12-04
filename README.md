@@ -12,7 +12,7 @@ First make sure that the images you plan to convert are in PNG or JPG format and
 Run with python and it will convert all the PNGs and JPGs to dds files with the appropriate size for a kneeboard.
 
 ### Usage of Release
-The release comes as a self-extracting archive with .exe ending and as a 7z-file. When you run the extracted exe, all the PNGs and 
+The release comes a 7z-file. When you run the extracted exe, all the PNGs and 
 JPGs in the working directory will be converted to dds files with the appropriate size for a kneeboard.
 
 ### Output

@@ -1,4 +1,4 @@
-conda activate bmsbriefing
+conda activate kneeboard_dds_converter
 
 # --paths E:\programme\miniconda\pkgs\openssl-1.1.1l-h8ffe710_0\Library\bin: This allows installer to pack required DDLs like _ssl
 pyinstaller.exe -F -y --paths E:\programme\miniconda\pkgs\openssl-1.1.1l-h8ffe710_0\Library\bin convert_to_kneeboard.py 
