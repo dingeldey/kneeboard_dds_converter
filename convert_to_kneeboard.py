@@ -21,9 +21,11 @@ def convert_to_kneeboard(file_name: str, kneeboard_page: int, out_dir: str, logg
     closer you pick the values the better the result will be.
     """
 
-    # HACK: I do not exactly know how many pages should be replaced, but before writing over needed data, I chose 4 for now.
+    logger.info(f"Processing {file_name}")
+
+    # HACK: I do not exactly know how many pages should be replaced, but before writing over needed data, I chose 17 for now.
     # If you run into this restriction, we will have to figure it out :)
-    assert 0 < kneeboard_page < 6
+    assert 0 < kneeboard_page < 17
     tmp_file = os.path.join(out_dir, "tmp.png").replace("\\", "/")
     with PILImage.open(file_name) as img:
         resized_image = img.resize((2048, 2048))
