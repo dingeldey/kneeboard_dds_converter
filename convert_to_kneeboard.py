@@ -36,7 +36,7 @@ def convert_to_kneeboard(dest_dir: str, file_name: str, kneeboard_page: int, out
     page1 = 7982
     page = page1 - 1 + kneeboard_page
     bkp_dds = os.path.join(dest_dir, str(page) + '.dds_bkp')
-    logger.info(f"Trying to open orirignal dds {bkp_dds}")
+    logger.info(f"Trying to open original dds {bkp_dds}")
     with image.Image(filename=bkp_dds) as left:
         img.compression = "no"
         with image.Image(filename=os.path.join(out_dir, str(kneeboard_page) + '.png')) as right:
@@ -49,7 +49,7 @@ def convert_to_kneeboard(dest_dir: str, file_name: str, kneeboard_page: int, out
 
 
 if __name__ == "__main__":
-    logger = Log.instance().set_up_logger("./convert_to_kneeboard.log").logger
+    logger = Log.instance().set_up_logger("."+os.sep+"convert_to_kneeboard.log").logger
     logger = Log.instance().logger
     logger.info("Start")
     import glob
@@ -58,7 +58,7 @@ if __name__ == "__main__":
 
     for i, file in enumerate(files):
         try:
-            convert_to_kneeboard(file, i+1, './', logger)
+            convert_to_kneeboard(file, i+1, "."+os.sep, logger)
         except Exception as e:
             print(str(e))
             print("\n".join(traceback.TracebackException.from_exception(e).format()))
